@@ -12,7 +12,7 @@ const PROJECTS: Project[] = [
   {
     title: "Astro UXDS",
     description: "A web component library that brings the Astro design system into your project.",
-    technologies: ["Stencil", "CSS", "HTML", "JSX", "Typescript", "Storybook", "Playwright"],
+    technologies: ["Stencil", "CSS", "HTML", "JSX", "TypeScript", "Storybook", "Playwright"],
     githubUrl: "https://github.com/RocketCommunicationsInc/astro",
     liveUrl: "https://astro-components.netlify.app/?path=/docs/astro-uxds-start-here--docs",
     npmUrl: "https://www.npmjs.com/package/@astrouxds/astro-web-components"
@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
   {
     title: "Astro UXDS Grafana Plugin",
     description: "A community Grafana plugin that brings the Astro design system into your dashboard.",
-    technologies: ["React", "Grafana", "Typescript", "CSS"],
+    technologies: ["React", "Grafana", "TypeScript", "CSS"],
     githubUrl: "https://github.com/RocketCommunicationsInc/grafana-theme/blob/main/src/Clock.tsx",
     liveUrl: "https://grafana.com/grafana/plugins/rocketcom-astrotheme-panel/"
   },
