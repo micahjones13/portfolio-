@@ -1,3 +1,5 @@
+import { useMetaTags } from '../hooks/useMetaTags';
+
 interface BlogPost {
   id: number;
   title: string;
@@ -17,6 +19,15 @@ const SAMPLE_POSTS: BlogPost[] = [
 ];
 
 const Blog = () => {
+  useMetaTags({
+    title: 'Micah Jones - Full Stack Developer | Blog',
+    description: 'Articles and thoughts about the web written by Micah Jones',
+    keywords: 'Web Development Blog, React Blog, TypeScript, JavaScript, Tech Blog, Micah Jones Blog, Developer Blog',
+    ogTitle: 'Micah Jones - Web Development Blog',
+    ogDescription: 'Articles and thoughts about the web written by Micah Jones',
+    ogUrl: 'https://micahjones.dev/blog',
+  });
+
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Blog</h1>
