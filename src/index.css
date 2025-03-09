@@ -2,17 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.skills-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 170px;
+}
 .skills-scroll-container {
-  overflow: hidden;
+  position: relative;
+  --scroll-width: 0px;
+}
+
+.skills-scroll-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
   -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-  --scroll-width: 0px;
+  pointer-events: none;
 }
 
 .skills-scroll-content {
   display: flex;
   animation: scroll 40s linear infinite;
   width: max-content;
+  position: relative;
+}
+
+.skills-scroll-content > div {
+  position: relative;
+  z-index: 10;
+}
+
+.skills-scroll-content > div:hover {
+  z-index: 50;
 }
 
 @keyframes scroll {
