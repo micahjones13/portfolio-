@@ -59,22 +59,34 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="w-full space-y-0 mb-4">
+    <section className="w-full space-y-6" aria-labelledby="skills-heading">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-gray-100">Tech & Tools</h2>
+        <h2 id="skills-heading" className="text-2xl font-semibold mb-8 text-gray-900 dark:text-gray-100">Tech & Tools</h2>
       </div>
       <div className="w-full max-w-6xl overflow-hidden py-8 mx-auto px-4 skills-scroll">
-        <div ref={scrollContainerRef} className="skills-scroll-container bg-gray-100/50 dark:bg-slate-800/50 py-4">
+        <div 
+          ref={scrollContainerRef} 
+          className="skills-scroll-container bg-gray-100/50 dark:bg-slate-800/50 py-4"
+          role="region"
+          aria-label="Scrolling skills showcase"
+        >
           <div ref={scrollContentRef} className="skills-scroll-content flex gap-8">
             {[...Array(4)].map((_, setIndex) => (
               SKILLS.map((skill, index) => (
                 <div 
                   key={`${skill.name}-${setIndex}-${index}`}
                   className="group relative inline-flex shrink-0 items-center justify-center bg-white dark:bg-slate-700 px-6 py-3 rounded-lg text-gray-700 dark:text-gray-100 font-medium shadow-lg hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors border border-gray-200 dark:border-transparent"
+                  role="button"
+                  tabIndex={0}
+                  aria-describedby={skill.description ? `skill-desc-${setIndex}-${index}` : undefined}
                 >
                   {skill.name}
                   {skill.description && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-normal pointer-events-none w-48 text-center shadow-xl z-[100] border border-gray-200 dark:border-sky-300">
+                    <div 
+                      id={`skill-desc-${setIndex}-${index}`}
+                      role="tooltip"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-3 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-normal pointer-events-none w-48 text-center shadow-xl z-[100] border border-gray-200 dark:border-sky-300"
+                    >
                       <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-8 border-transparent border-b-gray-200 dark:border-b-sky-300"></div>
                       <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-[7px] border-transparent border-b-white dark:border-b-gray-900"></div>
                       {skill.description}
