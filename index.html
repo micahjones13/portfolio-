@@ -5,6 +5,16 @@
     <link rel="icon" type="image/png" href="/src/assets/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Micah Jones</title>
+    <script>
+      // Immediately check localStorage and system preference
+      (function() {
+        const theme = localStorage.getItem('theme');
+        // If no theme is set in localStorage, default to dark
+        if (!theme || theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

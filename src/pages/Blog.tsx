@@ -19,17 +19,22 @@ const SAMPLE_POSTS: BlogPost[] = [
 const Blog = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Blog</h1>
-      <p className="text-gray-400 mb-8">A place to share my thoughts and ideas.</p>
+      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">Blog</h1>
+      <p className="text-gray-600 dark:text-gray-400 mb-8">A place to share my thoughts and ideas.</p>
       <div className="space-y-8">
         {SAMPLE_POSTS.map((post) => (
-          <article key={post.id} className="border-b border-gray-200 pb-8">
-            <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
-            <p className="text-sm mb-4">{new Date(post.date).toLocaleDateString()}</p>
-            <p className="text-white">{post.excerpt}</p>
-            <button className="mt-4 text-blue-600 hover:text-blue-800 font-medium">
-              <a href={post.link} target="_blank" rel="noopener noreferrer">Read more →</a>
-            </button>
+          <article key={post.id} className="border-b border-gray-200 dark:border-gray-700 pb-8">
+            <h2 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100">{post.title}</h2>
+            <p className="text-sm mb-4 text-gray-500 dark:text-gray-400">{new Date(post.date).toLocaleDateString()}</p>
+            <p className="text-gray-700 dark:text-gray-300">{post.excerpt}</p>
+            <a 
+              href={post.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-medium"
+            >
+              Read more →
+            </a>
           </article>
         ))}
       </div>

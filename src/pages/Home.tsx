@@ -5,11 +5,13 @@ import Skills from '../components/Skills';
 
 const Home = () => {
   return (
-    <div className="w-full space-y-16 py-8">
+    <div className="py-16 space-y-16">
       <Header />
       <About />
-      <Skills />
-      <Projects />
+      <div className="space-y-0">
+        <Skills />
+        <Projects />
+      </div>
     </div>
   );
 };

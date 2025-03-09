@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  height: 170px;
+  height: 180px;
 }
 .skills-scroll-container {
   position: relative;
@@ -51,22 +51,22 @@
   animation-play-state: paused;
 }
 
-/* Hide scrollbar for the skills section */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
 }
 .no-scrollbar::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none;  
 }
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: dark;
-  color: #e2e8f0;
-  background-color: #0f172a;
+  color-scheme: light dark;
+  /* Light theme defaults */
+  color: #1e293b;
+  background-color: #f8fafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -75,60 +75,87 @@
 
 a {
   font-weight: 500;
-  color: #60a5fa;
+  color: #2563eb;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #93c5fd;
+  color: #1d4ed8;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
   width: 100%;
-  background-color: #0f172a;
+  background-color: #f8fafc;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #0f172a;
 }
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #e2e8f0;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1e293b;
-  color: #e2e8f0;
+  background-color: #ffffff;
+  color: #1e293b;
   cursor: pointer;
   transition: all 0.25s;
 }
 
 button:hover {
-  border-color: #60a5fa;
-  background-color: #334155;
+  border-color: #2563eb;
+  background-color: #f8fafc;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 2px solid #60a5fa;
+  outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
 
-/* Remove or modify the light mode override */
-@media (prefers-color-scheme: light) {
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
   :root {
     color: #e2e8f0;
     background-color: #0f172a;
   }
+
+  body {
+    background-color: #0f172a;
+  }
+
+  h1 {
+    color: #f8fafc;
+  }
+
+  a {
+    color: #60a5fa;
+  }
+
   a:hover {
     color: #93c5fd;
   }
+
   button {
     background-color: #1e293b;
+    color: #e2e8f0;
+    border-color: transparent;
+  }
+
+  button:hover {
+    border-color: #60a5fa;
+    background-color: #334155;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline-color: #60a5fa;
   }
 }
