@@ -28,8 +28,8 @@ const PROJECTS: Project[] = [
     title: "Portfolio Website",
     description: "A modern portfolio website built with React and Tailwind CSS, featuring a responsive design and animated components.",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    githubUrl: "https://github.com/yourusername/portfolio",
-    liveUrl: "https://your-portfolio.com"
+    githubUrl: "https://github.com/micahjones13/portfolio-",
+    liveUrl: "https://micahjones.dev"
   },
 ];
 
