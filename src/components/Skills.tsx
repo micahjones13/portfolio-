@@ -19,7 +19,7 @@ const SKILLS: Skill[] = [
   { name: 'Docker', description: 'Docker is useful and I can use it, but don\'t ask me to explain it.' },
   { name: 'Storybook', description: 'Used it to build a documentation site for a web component library.' },
   { name: 'CI/CD', description: 'I\'ve spent too much time fighting with CI/CD pipelines.' },
-  { name: 'Git', description: 'git commit -m "fixed?"' },
+  { name: 'Git', description: 'git commit -m \'fixed?\'.' },
   { name: 'GitHub', description: 'I really enjoy using GitHub, I\'ve been using it for years.' },
   { name: 'GitLab', description: 'I\'ve used GitLab for a couple projects, but I\'m no pro.' },
   { name: 'Jira', description: 'How many story points can one person handle?' },
@@ -59,7 +59,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="w-full space-y-6">
+    <section className="w-full space-y-0 mb-4">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-2xl font-semibold mb-8 text-gray-900 dark:text-gray-100">Tech & Tools</h2>
       </div>
