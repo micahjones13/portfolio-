@@ -87,6 +87,7 @@ body {
   margin: 0;
   min-height: 100vh;
   width: 100%;
+  background-color: #0f172a;
 }
 
 h1 {
@@ -118,15 +119,16 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Remove or modify the light mode override */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #e2e8f0;
+    background-color: #0f172a;
   }
   a:hover {
-    color: #747bff;
+    color: #93c5fd;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #1e293b;
   }
 }
