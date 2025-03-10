@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
 
 const Projects = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto px-4 space-y-8 -mt-8">
+    <section className="w-full max-w-6xl mx-auto px-4 space-y-8">
       <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {PROJECTS.map((project) => (
